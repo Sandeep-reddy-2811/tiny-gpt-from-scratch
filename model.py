@@ -439,8 +439,19 @@ def allocate_count_matrix(vocab_size):
     return arr
     pass
 
-# Step 46 - loop_fill_counts (not yet solved)
-# TODO: implement
+# Step 46 - loop_fill_counts
+import numpy as np
+
+def loop_fill_counts(n_matrix, data):
+    """Increment n_matrix[curr, next] for every consecutive pair in data."""
+    # TODO: walk consecutive (current, next) pairs in data and add 1 to the matching cell
+    for t in range(len(data)-1):
+        i = data[t]
+        j = data[t+1]
+        n_matrix[i, j] += 1
+
+    return n_matrix
+    pass
 
 # Step 47 - vectorize_counts_add_at (not yet solved)
 # TODO: implement
